@@ -39,26 +39,16 @@ public class TestC extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>クラスの作成</h1>");
-            
-            setNum();
-            pr(out);
+      
+            Task2 t2 = new Task2();
+            t2.setNum();
+            t2.pr(out);
+            t2.clear();
+            t2.pr(out);
                        
             out.println("</body>");
             out.println("</html>");
         }
-    }
-    
-    public int num1;
-    public int num2;
-    
-    public void setNum(){
-        this.num1 = 1;
-        this.num2 = 2;
-    }
-    
-    public void pr(PrintWriter out){
-        out.print(num1+"<br>");
-        out.print(num2+"<br>");
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -100,4 +90,26 @@ public class TestC extends HttpServlet {
         return "Short description";
     }// </editor-fold>
 
+}
+
+class Task1 {
+    public int num1;
+    public int num2;
+    
+    public void setNum(){
+        this.num1 = 1;
+        this.num2 = 2;
+    }
+    
+    public void pr(PrintWriter out){
+        out.print(num1+"<br>");
+        out.print(num2+"<br>");
+    }
+}
+
+class Task2 extends Task1 {
+    public void clear(){
+        this.num1 = 0;
+        this.num2 = 0;
+    }
 }
