@@ -49,7 +49,7 @@ public class SessionTask3 extends HttpServlet {
             HttpSession session = request.getSession();
             session.setAttribute("Name", Name);
             session.setAttribute("Gender", Gender);
-            session.setAttribute("Hooby", Hobby);
+            session.setAttribute("Hobby", Hobby);
             
             out.println("名前:"+Name+"<br>");
             out.println("性別:"+Gender+"<br>");
